@@ -7,7 +7,8 @@ Build a stable Raspberry Pi/Linux foundation for all later phases.
 - [x] Ordered hardware received (user-confirmed).
 - [x] Raspberry Pi OS installed.
 - [x] Raspberry Pi Connect used successfully to access the Pi from the user's Mac.
-- [ ] Record exact Raspberry Pi OS release/version and installation/storage details.
+- [x] Record OS release, Pi model/architecture and boot/storage layout from baseline commands.
+- [ ] Confirm Raspberry Pi OS-specific release details and document installation/storage details.
 - [ ] Verify network stability and document connection approach.
 - [ ] Configure and validate SSH access separately from Raspberry Pi Connect.
 - [ ] Review users, permissions, updates and baseline security.
@@ -17,6 +18,14 @@ Build a stable Raspberry Pi/Linux foundation for all later phases.
 - [ ] Test backup and recovery.
 
 Raspberry Pi Connect access confirms that remote access works, but it does not by itself validate SSH, long-term network stability, backup/recovery or the complete Phase 1 baseline.
+
+## Baseline recorded (2026-10-15)
+- OS release file reports Debian GNU/Linux 13 (Trixie), version `13.7`.
+- Hardware reports Raspberry Pi 5 Model B, revision 1.1.
+- CPU architecture: `aarch64` (64-bit ARM).
+- Hostname: `presh-iot`.
+- `lsblk` reports `/dev/sda` as a 28.7 GB removable disk; `/dev/sda1` is mounted at `/boot/firmware` and `/dev/sda2` at `/`. The current root filesystem is therefore on `/dev/sda2`, consistent with booting from USB storage.
+- The screenshot does not include `df -h` or `hostname -I`; free space and IP address remain unrecorded.
 
 ## Scope
 - Raspberry Pi model and OS
