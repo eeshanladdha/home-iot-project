@@ -14,7 +14,8 @@ Build a stable Raspberry Pi/Linux foundation for all later phases.
 - [x] Test SSH connectivity from the Mac.
 - [ ] Review SSH authentication/security settings.
 - [ ] Review users, permissions, updates and baseline security.
-- [ ] Establish Python virtual environment and Git workflow.
+- [x] Create and activate a project-specific Python virtual environment.
+- [ ] Configure/verify Git identity and test the repository workflow.
 - [ ] Evaluate Docker versus native services and record the decision.
 - [ ] Establish logging/monitoring baseline.
 - [ ] Test backup and recovery.
@@ -32,6 +33,8 @@ Raspberry Pi Connect and SSH connectivity from the Mac have both been confirmed 
 - `hostname -I` reports private IPv4 address `192.168.10.199` and an IPv6 address. Do not treat these as permanent addresses; DHCP may change them.
 - `systemctl is-active ssh` returns `active`; the user subsequently confirmed that SSH login from the Mac succeeds. Authentication/security configuration has not yet been reviewed.
 - Python `3.13.5` and Git `2.47.3` are installed.
+- User created `~/home-iot-project/.venv`, activated it, and confirmed Python `3.13.5` runs from `/home/eeshan6868/home-iot-project/.venv/bin/python`.
+- Git identity configuration and GitHub repository clone/remote are not yet confirmed.
 
 ## Scope
 - Raspberry Pi model and OS
@@ -62,7 +65,7 @@ Do not commit passwords, private keys, access tokens, full Wi-Fi credentials or 
 - [ ] Network stable and documented
 - [ ] SSH secured
 - [ ] User model established
-- [ ] Python environment ready
+- [x] Python environment ready
 - [ ] Git workflow tested
 - [ ] Docker decision recorded
 - [ ] Monitoring baseline established
