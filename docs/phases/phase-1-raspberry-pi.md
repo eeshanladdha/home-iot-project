@@ -11,14 +11,15 @@ Build a stable Raspberry Pi/Linux foundation for all later phases.
 - [x] Record Raspberry Pi image reference date, storage usage, network address presence, SSH service status, Python and Git versions.
 - [ ] Confirm Raspberry Pi OS-specific release details and document installation/storage details.
 - [ ] Verify network stability and document connection approach.
-- [ ] Test SSH connectivity from the Mac and review authentication/security settings.
+- [x] Test SSH connectivity from the Mac.
+- [ ] Review SSH authentication/security settings.
 - [ ] Review users, permissions, updates and baseline security.
 - [ ] Establish Python virtual environment and Git workflow.
 - [ ] Evaluate Docker versus native services and record the decision.
 - [ ] Establish logging/monitoring baseline.
 - [ ] Test backup and recovery.
 
-Raspberry Pi Connect access confirms that remote access works, but it does not by itself validate SSH, long-term network stability, backup/recovery or the complete Phase 1 baseline.
+Raspberry Pi Connect and SSH connectivity from the Mac have both been confirmed by the user. SSH security settings, long-term network stability, backup/recovery and the complete Phase 1 baseline remain to be validated.
 
 ## Baseline recorded (2026-10-15)
 - OS release file reports Debian GNU/Linux 13 (Trixie), version `13.7`.
@@ -29,7 +30,7 @@ Raspberry Pi Connect access confirms that remote access works, but it does not b
 - `df -h` reports `/dev/sda2` as a 28 GB root filesystem, 6.7 GB used and 20 GB available (26% used); `/dev/sda1` is 505 MB with 417 MB available at `/boot/firmware`.
 - `/etc/rpi-issue` reports `Raspberry Pi reference 2026-10-06` and a `pi-gen` build reference.
 - `hostname -I` reports private IPv4 address `192.168.10.199` and an IPv6 address. Do not treat these as permanent addresses; DHCP may change them.
-- `systemctl is-active ssh` returns `active`. SSH is running, but client connectivity and authentication/security configuration are not yet validated.
+- `systemctl is-active ssh` returns `active`; the user subsequently confirmed that SSH login from the Mac succeeds. Authentication/security configuration has not yet been reviewed.
 - Python `3.13.5` and Git `2.47.3` are installed.
 
 ## Scope
