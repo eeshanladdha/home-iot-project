@@ -63,7 +63,8 @@ Update the status as hardware moves through these states. Record exact board/mod
 - [x] User confirmed the order has arrived.
 - [ ] Physically cross-check all item quantities and part numbers against the order.
 - [ ] Record exact BME280 breakout-board manufacturer/revision.
-- [ ] Record Raspberry Pi OS release/version and boot/storage medium.
+- [x] Record OS release file output and boot/storage layout: Debian GNU/Linux 13 (Trixie) 13.7; `/dev/sda` 28.7 GB with root mounted from `/dev/sda2`.
+- [ ] Confirm Raspberry Pi OS-specific release details and identify the physical USB storage device.
 - [ ] Capture a photo of the received hardware for the project record, if useful.
 
 ## Inventory rules
