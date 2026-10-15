@@ -2,19 +2,19 @@
 
 Authoritative project hardware list. Status is tracked separately from purchase state so the inventory stays useful through setup and testing.
 
-## Ordered hardware
+## Received hardware
 
 | ID | Component | Exact model / part | DigiKey / reference | Phase | Qty | Status | Purpose |
 |---|---|---|---|---|---:|---|---|
-| HW-001 | Raspberry Pi 5 | SC1432 / Raspberry Pi Pi 5 8GB | 2648-SC1432-ND | 1 | 1 | **Ordered** | Main edge computer |
-| HW-002 | Raspberry Pi case | SC1159 | 2648-SC1159-ND | 1 | 1 | **Ordered** | Pi protection/cooling enclosure |
-| HW-003 | Raspberry Pi PSU | SC1407, 27W USB-C EU white | 2648-SC1407-ND | 1 | 1 | **Ordered** | Stable Pi power |
-| HW-004 | Light sensor | SEN0097 / BH1750 | 1738-1100-ND | 3 | 1 | **Ordered** | Ambient light measurement |
-| HW-005 | Jumper wires M-M | Adafruit 1956, 3", 28AWG | 1528-1966-ND | 1-3 | 1 | **Ordered** | Breadboard/prototyping connections |
-| HW-006 | Header wires F-M | Adafruit 5018, 10 headers | 1528-5018-ND | 1-3 | 1 | **Ordered** | GPIO/breadboard connections |
-| HW-007 | Jumper wires F-F | Adafruit 1951, 3", 28AWG | 1528-1962-ND | 1-3 | 1 | **Ordered** | GPIO/prototyping connections |
-| HW-008 | Temperature/humidity/pressure sensor | BME280, I2C/SPI, 3.3V/5V listing | User order | 3 | 1 | **Ordered** | Environmental telemetry |
-| HW-009 | Arduino UNO R3 starter kit | Breadboard, LEDs, jumper cables and accessories | User order | 1-3 | 1 | **Ordered** | Electronics learning/prototyping |
+| HW-001 | Raspberry Pi 5 | SC1432 / Raspberry Pi 5 8GB | 2648-SC1432-ND | 1 | 1 | **Installed** | Main edge computer; Raspberry Pi OS installed and remote desktop access verified with Raspberry Pi Connect |
+| HW-002 | Raspberry Pi case | SC1159 | 2648-SC1159-ND | 1 | 1 | **Received** | Pi protection/cooling enclosure |
+| HW-003 | Raspberry Pi PSU | SC1407, 27W USB-C EU white | 2648-SC1407-ND | 1 | 1 | **Received** | Stable Pi power |
+| HW-004 | Light sensor | SEN0097 / BH1750 | 1738-1100-ND | 3 | 1 | **Received** | Ambient light measurement |
+| HW-005 | Jumper wires M-M | Adafruit 1956, 3", 28AWG | 1528-1966-ND | 1-3 | 1 | **Received** | Breadboard/prototyping connections |
+| HW-006 | Header wires F-M | Adafruit 5018, 10 headers | 1528-5018-ND | 1-3 | 1 | **Received** | GPIO/breadboard connections |
+| HW-007 | Jumper wires F-F | Adafruit 1951, 3", 28AWG | 1528-1962-ND | 1-3 | 1 | **Received** | GPIO/prototyping connections |
+| HW-008 | Temperature/humidity/pressure sensor | BME280, I2C/SPI, 3.3V/5V listing | User order | 3 | 1 | **Received** | Environmental telemetry |
+| HW-009 | Arduino UNO R3 starter kit | Breadboard, LEDs, jumper cables and accessories | User order | 1-3 | 1 | **Received** | Electronics learning/prototyping |
 
 ## Previously planned / not yet ordered
 
@@ -22,7 +22,7 @@ Authoritative project hardware list. Status is tracked separately from purchase 
 |---|---|---|---|---|---|---|
 | HW-010 | Camera | SC1174 | 2 | Planned | Primary vision camera | Planned for Phase 2 |
 | HW-011 | Camera | SC1785 | TBD | **Not required currently** | Optional/specialized vision | Do not purchase unless a concrete Phase 2+ use case requires it |
-| HW-012 | Additional storage | TBD | 1 | TBD | OS/data storage if required | Reassess after Pi 5 setup |
+| HW-012 | Additional storage | TBD | 1 | TBD | OS/data storage if required | Reassess after Pi 5 setup; confirm current boot/storage medium before buying |
 | HW-013 | Additional sensors | TBD | 3+ | TBD | Home telemetry | Select based on experiments |
 
 ## Current purchase summary
@@ -51,16 +51,24 @@ The ordered DigiKey subtotal supplied for items HW-001 to HW-007 is **1,929.51 N
 
 - **Planned**: identified but not ordered.
 - **Ordered**: purchase placed, parcel not yet confirmed received.
-- **Received**: physically received and checked.
-- **Installed**: connected and configured.
+- **Received**: physically received.
+- **Installed**: connected and configured for its intended current role.
 - **Validated**: tested successfully with evidence.
 - **Retired**: no longer part of the active setup.
 
 Update the status as hardware moves through these states. Record exact board/module revisions when received because breakout-board implementations can differ.
+
+## Receiving follow-up
+
+- [x] User confirmed the order has arrived.
+- [ ] Physically cross-check all item quantities and part numbers against the order.
+- [ ] Record exact BME280 breakout-board manufacturer/revision.
+- [ ] Record Raspberry Pi OS release/version and boot/storage medium.
+- [ ] Capture a photo of the received hardware for the project record, if useful.
 
 ## Inventory rules
 
 - Record exact part number where possible.
 - Keep optional hardware explicitly TBD.
 - Update this file when hardware changes the architecture.
-- Do not treat an ordered component as available for implementation until it is physically received and checked.
+- Do not treat an item as validated merely because it has been received or installed.
