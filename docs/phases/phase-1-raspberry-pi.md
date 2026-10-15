@@ -16,7 +16,8 @@ Build a stable Raspberry Pi/Linux foundation for all later phases.
 - [ ] Review users, permissions, updates and baseline security.
 - [x] Create and activate a project-specific Python virtual environment.
 - [x] Clone the existing GitHub repository to `~/home-iot-project-repo` and create/activate its `.venv`.
-- [ ] Verify Git identity and working-tree/remote status; make a first controlled commit.
+- [x] Verify repository branch, clean working tree, `origin` remote, and `.venv` ignore rule.
+- [ ] Configure Git author identity and make a first controlled commit.
 - [ ] Evaluate Docker versus native services and record the decision.
 - [ ] Establish logging/monitoring baseline.
 - [ ] Test backup and recovery.
@@ -35,7 +36,9 @@ Raspberry Pi Connect and SSH connectivity from the Mac have both been confirmed 
 - `systemctl is-active ssh` returns `active`; the user subsequently confirmed that SSH login from the Mac succeeds. Authentication/security configuration has not yet been reviewed.
 - Python `3.13.5` and Git `2.47.3` are installed.
 - User created `~/home-iot-project/.venv`, activated it, and confirmed Python `3.13.5` runs from `/home/eeshan6868/home-iot-project/.venv/bin/python`.
-- User reports the existing GitHub repository cloned successfully to `~/home-iot-project-repo` and a virtual environment was created/activated there. Git identity output, `git status`, and `git remote -v` have not been shared yet.
+- User confirmed `~/home-iot-project-repo` is on branch `main`, up to date with `origin/main`, with a clean working tree. `origin` fetch/push points to the existing GitHub repository.
+- `git check-ignore .venv` returns `.venv`, confirming the virtual environment is ignored.
+- `git config --global user.name` and `user.email` returned no visible values, so Git author identity is not yet configured globally (or is not set).
 
 ## Scope
 - Raspberry Pi model and OS
