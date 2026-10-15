@@ -14,7 +14,7 @@ A hands-on home IoT and edge-AI project focused on Raspberry Pi, sensors, comput
 | Phase | Focus | Status |
 |---|---|---|
 | 0 | Project foundation | In progress |
-| 1 | Raspberry Pi foundation | Planned |
+| 1 | Raspberry Pi foundation | **In progress: OS installed; Raspberry Pi Connect access from Mac verified** |
 | 2 | Camera and vision | Planned |
 | 3 | Sensors and monitoring | Planned |
 | 4 | Local automation | Planned |
@@ -42,11 +42,13 @@ Backlog -> Selected -> Implement -> Test -> Validate -> Log Results -> Document 
 
 Completed work should leave evidence: code/commit, test result, logs, documentation and, where relevant, an ADR.
 
-## Current state
-- Current phase: Phase 0, Project Foundation
-- Hardware: acquisition/setup being prepared
-- Architecture: baseline established
-- Next focus: repository baseline, hardware inventory and Phase 1 setup
+## Current state (2026-10-15)
+- Current phase: Phase 1, Raspberry Pi Foundation
+- Hardware: user confirms the order has arrived; inventory statuses updated, with part/revision cross-check still pending
+- Raspberry Pi OS: installed
+- Remote access: Raspberry Pi Connect tested successfully from Mac
+- Remaining Phase 1 work: record OS/storage details, verify network stability, configure SSH securely, set up Python/Git, decide Docker vs native, add monitoring/logging and test backup/recovery
+- Next focus: finish the Phase 1 baseline before starting camera or sensor implementation
 
 See `docs/00-project-charter.md`, `docs/01-roadmap.md` and `docs/02-hld.md`.
 
