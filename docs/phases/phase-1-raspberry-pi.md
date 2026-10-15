@@ -8,9 +8,10 @@ Build a stable Raspberry Pi/Linux foundation for all later phases.
 - [x] Raspberry Pi OS installed.
 - [x] Raspberry Pi Connect used successfully to access the Pi from the user's Mac.
 - [x] Record OS release, Pi model/architecture and boot/storage layout from baseline commands.
+- [x] Record Raspberry Pi image reference date, storage usage, network address presence, SSH service status, Python and Git versions.
 - [ ] Confirm Raspberry Pi OS-specific release details and document installation/storage details.
 - [ ] Verify network stability and document connection approach.
-- [ ] Configure and validate SSH access separately from Raspberry Pi Connect.
+- [ ] Test SSH connectivity from the Mac and review authentication/security settings.
 - [ ] Review users, permissions, updates and baseline security.
 - [ ] Establish Python virtual environment and Git workflow.
 - [ ] Evaluate Docker versus native services and record the decision.
@@ -25,7 +26,11 @@ Raspberry Pi Connect access confirms that remote access works, but it does not b
 - CPU architecture: `aarch64` (64-bit ARM).
 - Hostname: `presh-iot`.
 - `lsblk` reports `/dev/sda` as a 28.7 GB removable disk; `/dev/sda1` is mounted at `/boot/firmware` and `/dev/sda2` at `/`. The current root filesystem is therefore on `/dev/sda2`, consistent with booting from USB storage.
-- The screenshot does not include `df -h` or `hostname -I`; free space and IP address remain unrecorded.
+- `df -h` reports `/dev/sda2` as a 28 GB root filesystem, 6.7 GB used and 20 GB available (26% used); `/dev/sda1` is 505 MB with 417 MB available at `/boot/firmware`.
+- `/etc/rpi-issue` reports `Raspberry Pi reference 2026-10-06` and a `pi-gen` build reference.
+- `hostname -I` reports private IPv4 address `192.168.10.199` and an IPv6 address. Do not treat these as permanent addresses; DHCP may change them.
+- `systemctl is-active ssh` returns `active`. SSH is running, but client connectivity and authentication/security configuration are not yet validated.
+- Python `3.13.5` and Git `2.47.3` are installed.
 
 ## Scope
 - Raspberry Pi model and OS
